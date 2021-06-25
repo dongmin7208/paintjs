@@ -1,6 +1,6 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
-
+const colors = document.getElementsByClassName("jsColor");
 canvas.width = 700;
 canvas.height = 700;
 
@@ -21,11 +21,12 @@ function onMouseMove(event) {
     const y = event.offsetY;
     if (!painting) {
         //클릭하고 움직이면 더이상 사용안함.
-        ctx.beginPath();
+        ctx.beginPath(); //>> Path = line
         ctx.moveTo(x, y);
     } else {
         ctx.lineTo(x, y);
         ctx.stroke();
+        //ctx.closePath();
     }
 }
 function onMouseDown(event) {
@@ -37,3 +38,5 @@ if (canvas) {
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
 }
+
+console.log(Array.from(colors));
