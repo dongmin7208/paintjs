@@ -37,7 +37,8 @@ function handleColorClick(event) {
     console.log(color);
 }
 function handleRangeChange(event) {
-    console.log(event);
+    const size = event.target.value;
+    ctx.lineWidth = size;
 }
 
 if (canvas) {
