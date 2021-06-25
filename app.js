@@ -29,14 +29,16 @@ function onMouseMove(event) {
         //ctx.closePath();
     }
 }
-function onMouseDown(event) {
-    painting = true;
+
+function handleColorClick(event) {
+    console.log(event.target.style);
 }
+
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("mousedown", onMouseDown);
+    canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
 }
 
-console.log(Array.from(colors));
+Array.from(colors).forEach((color) => color.addEventListener("click", handleColorClick));
