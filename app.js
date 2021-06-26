@@ -7,7 +7,7 @@ const mode = document.getElementById("jsMode");
 canvas.width = 700;
 canvas.height = 700;
 
-ctx.strokeStyle = "# 2c2c2c";
+ctx.strokeStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
 
 let painting = false;
@@ -62,10 +62,12 @@ if (canvas) {
 
 Array.from(colors).forEach((color) => color.addEventListener("click", handleColorClick));
 
+// Array.from(colors).forEach((color) => color.addEventListener("click", handleColorClick));
+
 if (range) {
     range.addEventListener("input", handleRangeChange);
 }
 
 if (mode) {
-    mode.addEventListener("cilck", handleModeClick);
+    mode.addEventListener("click", handleModeClick);
 }
