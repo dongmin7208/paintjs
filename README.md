@@ -51,15 +51,19 @@ git -v 2.32.0.window.1
 
 ## ❗Realization
 
-I found out that < input type="range"/>.  
-The <'canvas'>element is essential for all tasks dealing with pixels.  
+I found out that `< input type="range"/>`.  
+The `<'canvas'>`element is essential for all tasks dealing with pixels.  
+```css
 box-shadow: 0 4px 20px rgba(50, 50, 93, 0.5)  
 (offset-x | offset-y | blur-radius | color)
+```
 
 Get the coordinates of the "cursor"  
 We simply used offset here.
 
+```js
 canvas.addEventListener("mousemove", onMouseMove);  
 const x = event.offsetX;  
 const y = event.offsetY;  
+```
 ![cursor](./image/offset-cursor.jpg)
