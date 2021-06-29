@@ -56,10 +56,10 @@ The <'canvas'>element is essential for all tasks dealing with pixels.
 box-shadow: 0 4px 20px rgba(50, 50, 93, 0.5)  
 (offset-x | offset-y | blur-radius | color)
 
-Get the coordinates of the "cursor"
+Get the coordinates of the "cursor"  
 We simply used offset here.
 
-canvas.addEventListener("mousemove", onMouseMove);
-const x = event.offsetX;
-const y = event.offsetY;
-![cursor](image\offset-cursor.jpg)
+canvas.addEventListener("mousemove", onMouseMove);  
+const x = event.offsetX;  
+const y = event.offsetY;  
+![cursor](./image/offset-cursor.jpg)
